@@ -1,0 +1,31 @@
+<!-- <div class="large-1 columns" ng-repeat="user in vm.users">
+  <img src="http://graph.facebook.com/{{ user.fb.id }}/picture?width=120&height=120">
+</div> -->
+<button ng-click="vm.approveMember()">Approve</button>
+<button ng-click="vm.rejectMember()">Reject</button>
+<button ng-click="vm.deleteMember()">Delete</button>
+<table>
+  <thead>
+    <tr>
+      <th>check</th>
+      <th>photo</th>
+      <th>Fullname</th>
+      <th>Mobile</th>
+      <th>Role</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in vm.members">
+      <td><input type="checkbox" value="{{ user._id }}" ng-checked="vm.selectedVal.indexOf(user._id) > -1" ng-click="vm.selectionToggle(user._id)"></td>
+      <td><img src="http://graph.facebook.com/{{ user.fb.id }}/picture?width=120&height=120"></td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.mobile }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.status | status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+{{ vm.users }}
+{{ vm.checkboxVal }}

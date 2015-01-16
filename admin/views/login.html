@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="pkjkt">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="No longer than 155 characters." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/member.css">
+    <base href="/"></base>
+
+</head>
+
+<body ng-controller="LoginController as vm">
+    <div class="large-3 large-centered columns center-pos">
+        <div class="form-login">
+            <form ng-submit="vm.submit()" method="post">
+                <div class="row">
+                    <h3>PKJKT Members</h3>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input ng-model="vm.member.username" type="text" name="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input ng-model="vm.member.password" type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns btn-place">
+                        <input type="submit" class="button small" value="log in"/>
+                    </div>
+                </div>
+            </form>
+            <form action="/auth/facebook/">
+                <a ng-click="vm.facebookLogin()" class="button small">facebook</a>
+            </form>
+            <button ng-click="vm.getss()">token</button>
+            <a href="/anggota/reg" target="_self" class="button small">register</a>
+        </div>
+
+    {{ vm.member }}
+    {{ vm.tokenvalue }}
+    {{ vm.notif }}
+    </div>
+    <script type="text/javascript" src="/assets/js/vendor.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+</body>
+</html>

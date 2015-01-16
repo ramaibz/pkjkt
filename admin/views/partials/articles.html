@@ -1,0 +1,37 @@
+<div class="large-12 columns">
+  {{ vm.notif }}
+  <dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel1">Overview</a></dd>
+  <dd><a href="#panel2">New</a></dd>
+</dl>
+<div class="tabs-content">
+  <div class="content active" id="panel1">
+    <div class="" ng-repeat="article in vm.articles">
+      <h1>{{ article.title }}</h1>
+      <div ng-bind-html="article.tags | arrayToString | trusted"></div>
+    </div>
+  </div>
+  <div class="content" id="panel2">
+    <form method="post" ng-submit="vm.saveArticle()" novalidate>
+      <input type="text" placeholder="Title" ng-model="vm.article.title" name="title">
+
+      <input type="text" placeholder="Tags" ng-model="vm.article.tags" name="tags">
+
+      <textarea id="articlecontent" name="articlecontent" class="article-content" rows="10"></textarea>
+      <input type="submit" class="button">
+    </form>
+    <button id="get" class="button" ng-click="vm.preview()">Preview</button>
+    <hr>
+    <div class="large-12 columns">
+      <h3>{{ vm.article.title }}</h3>
+      <h4>{{ vm.article.tags }}</h4>
+      <div ng-bind-html="vm.article.content | trusted"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+

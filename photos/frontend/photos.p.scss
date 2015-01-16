@@ -1,0 +1,15 @@
+.album-gallery {
+    padding-top: 20px;
+    
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+        height: 300px;
+
+        h3 {
+            color: white;
+        }
+    }
+}

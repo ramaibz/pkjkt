@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="pkjkt">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="No longer than 155 characters." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/dev/dashboard.css" />
+    <base href="/"></base>
+
+</head>
+
+<body>
+  <div class="row full-width">
+    <div class="dashboard">
+    <div class="profile">
+      <div class="profile-image">
+        <img src="">
+      </div>
+      <div class="profile-bio" ng-controller="HomeController as vm">
+        <h1>{{ vm.profil }}</h1>
+        <h6 class="subheader role">as a {{ vm.test }}</h6>
+        <a ng-click="vm.logOut()">Logout</a>
+      </div>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a ui-sref="menu">Home</a></li>
+        <li><a ui-sref="member">Member</a></li>
+        <li><a ui-sref="forum">Forum</a></li>
+        <li><a ui-sref="broadcast">Broadcast</a></li>
+        <li><a ui-sref="document">Documents</a></li>
+        <li><a ui-sref="addArticle">Articles</a></li>
+        <li><a ui-sref="addPhotos">Photos</a></li>
+        <li><a ui-sref="chat">Chat</a></li>
+      </ul>
+    </nav>
+    </div>
+    <div ui-view class="view-area"></div>
+  </div>
+
+<script type="text/javascript" src="/assets/js/vendor.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/vendor/ckeditor/ckeditor.js"></script>
+</body>
+</html>

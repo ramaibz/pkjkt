@@ -1,0 +1,47 @@
+.video-page {
+  padding-top: 30px; }
+  .video-page .box {
+    margin: 10px 0; }
+
+.video-title {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden; }
+  .video-title h3 {
+    color: white; }
+  .video-title p {
+    color: white; }
+  .video-title:hover {
+    opacity: 0;
+    z-index: 0; }
+
+.custom-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  .custom-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .custom-video iframe:hover {
+      z-index: 1; }

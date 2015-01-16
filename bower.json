@@ -1,0 +1,34 @@
+{
+  "name": "Parkour Jakarta",
+  "version": "1",
+  "authors": [
+    "Prananda <ramaibz@gmail.com>"
+  ],
+  "description": "vendor libs",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "latest",
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-animate": "latest",
+    "angular-resource": "latest",
+    "ckeditor": "latest",
+    "auth0-angular": "latest",
+    "angular-storage": "latest",
+    "angular-jwt": "latest"
+  }
+}

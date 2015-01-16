@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="No longer than 155 characters." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/member.css">
+
+</head>
+
+<body>
+    <div class="large-4 large-centered columns center-pos">
+        <div class="form-register">
+            <form action="/register" method="post" novalidate>
+                <div class="row">
+                    <h3>Members Registration</h3>
+                    <% if(user) { %>
+                        <img src="<%= user.photos[0].value %>" alt="image error">
+                    <% } %>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input type="text" name="username" placeholder="Username" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input type="password" name="password" placeholder="Password" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input type="email" name="email" <% if(user) { %> value="<%= user.emails[0].value %>" <% } %>placeholder="Email" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input type="text" name="fullname" placeholder="Full name" <% if(user) { %> value="<%= user.displayName %>" <% } %> >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <input type="text" name="mobile" placeholder="Mobile Phone" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns btn-place">
+                        <input type="submit" class="button" value="Register"/>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+if (window.location.hash && window.location.hash === "#_=_") {
+  // If you are not using Modernizr, then the alternative is:
+  //   `if (window.history && history.replaceState) {`
+  if (window.history && history.replaceState) {
+    window.history.replaceState("", document.title, window.location.pathname);
+  } /*else {
+    // Prevent scrolling by storing the page's current scroll offset
+    var scroll = {
+      top: document.body.scrollTop,
+      left: document.body.scrollLeft
+    };
+    window.location.hash = "";
+    // Restore the scroll offset, should be flicker free
+    document.body.scrollTop = scroll.top;
+    document.body.scrollLeft = scroll.left;
+  }*/
+}
+</script>
+</html>

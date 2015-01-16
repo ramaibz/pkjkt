@@ -1,0 +1,58 @@
+<div class="postcontent">
+<form ng-submit="vm.submit('general')" method="post">
+  <h3>General Post</h3>
+  <div class="row">
+      <div class="large-12 columns">
+          <input type="text" name="fbcontent" placeholder="write your post" ng-model="vm.post.content">
+      </div>
+  </div>
+  <div class="row">
+      <div class="large-12 columns btn-place">
+        <input type="submit" class="button small" value="post"/>
+      </div>
+  </div>
+</form>
+
+<form ng-submit="vm.submit('training')" method="post">
+  <h3>Training Session</h3>
+<div class="row">
+    <div class="large-4 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-3 columns">
+          <span class="prefix">Date</span>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" placeholder="Value" ng-model="vm.post.date">
+        </div>
+      </div>
+    </div>
+    <div class="large-4 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-3 columns">
+          <span class="prefix">Time</span>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" placeholder="Value" ng-model="vm.post.time">
+        </div>
+      </div>
+    </div>
+    <div class="large-4 columns">
+      <div class="row collapse prefix-radius">
+        <div class="small-3 columns">
+          <span class="prefix">Location</span>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" placeholder="Value" ng-model="vm.post.place">
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+    <div class="large-12 columns btn-place">
+      <input type="submit" class="button small" value="post"/>
+    </div>
+</div>
+</form>
+
+
+</div>

@@ -1,0 +1,56 @@
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+.almost-full-width {
+    width: 80%;
+    max-width: 80%;
+}
+
+.full-height {
+    height: 100%;
+    max-height: 100%;
+}
+
+.view-area {
+    padding: 0 20px;
+}
+
+.profile {
+    background: rgb(34, 167, 240);
+    text-align: center;
+    height: 300px;
+    @extend .vertical-center;
+}
+
+.menu {
+    background: #9f9f9f;
+    margin: 0 auto;
+    text-align: center;
+    ul {
+         list-style-type: none;
+
+         li {
+            display: inline-block;
+            padding: 15px 10px;
+         }
+    }
+
+}
+
+input[type="text"] {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+}
